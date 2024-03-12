@@ -67,19 +67,7 @@ const images = [
     import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
     
-const imgGallery = document.querySelector(".gallery")
-    imgGallery.insertAdjacentHTML("beforeend", itemsGallery(images));
-    imgGallery.addEventListener("click",onGalleryItemClick);
-    function onGalleryItemClick(event) {
-        if(event.target.nodeName !== 'IMG') return;
-        event.preventDefault();
-        console.log(event.target.closest(".gallery-item"))
-        
-        const originalSource = event.target.getAttribute('data-source');
-    
-        const lightbox = basicLightbox.create(`<img src="${originalSource}">`);
-        lightbox.show();
-    }
+
 function itemsGallery (arr) {
     return arr
     .map(({preview, original, description}) =>
@@ -88,7 +76,7 @@ function itemsGallery (arr) {
 		<img 
 			class="gallery-image" 
 			src="${preview}" 
-			alt="Image description" 
+			alt="${decription}" 
 			/>
 	</a>
 </li>
