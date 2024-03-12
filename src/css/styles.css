@@ -23,3 +23,66 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+body {
+  margin: 24px 156px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 5px;
+}
+
+.gallery-image { 
+  width: 360px;
+  height: 200px;
+} 
+gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+.gallery-item:hover {
+  transform: scale(104%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.feedback-form {
+  width: 408px;
+  height: 309px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+.form-back {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ margin-top: 220px;
+}
+.feedback-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.feedback-form button {
+  background-color: #4E75FF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+.feedback-form button:hover {
+  background-color: #6C8CFF;
+}
